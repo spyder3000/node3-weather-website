@@ -25,9 +25,9 @@ const forecast = (long, lat, callback) => {
             callback('Unable to find location.  Try a different search');
         }
         else {
-            callback(null, 'Weather summary: '+ Math.round(body.main.temp)   // main data is in response.body
+            callback(null, /*'Weather summary: '+*/ Math.round(body.main.temp)   // main data is in response.body
                 + ' degrees.  ' + body.weather[0].main + '.  Wind speed is ' + body.wind.speed 
-                + '.  Temp high = ' +  Math.round(body.main.temp_max) + '. Temp low = ' +  Math.round(body.main.temp_min));
+                /*+ '.  Temp high = ' +  Math.round(body.main.temp_max) + '. Temp low = ' +  Math.round(body.main.temp_min)*/);
 
              /*   date: response.body.list[0].dt_txt, 
                 temp: Math.round(response.body.list[0].main.temp) + ' degrees.  ', 
