@@ -1,4 +1,4 @@
-console.log('Client side JavaScript file is loaded'); 
+console.log('Client side JavaScript file is loaded!'); 
 
 // fetch is a browser based API that can be used for Client-side API;  not accessible via node
 
