@@ -1,0 +1,26 @@
+<!--Visual Studio has built-in support for handlebars;  .hbs is handlebar file (basically an html file w/ some additional features
+        that allows for dynamic content) -->
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Weather</title>
+        <link rel="icon" href="/img/weather.png">
+        <link rel="stylesheet" href="/css/styles.css">  
+    </head>
+    <body>
+        <div class="main-content">
+            {{>header}}    <!-- > is needed to include a partial --> 
+            <p>Use this site to get your weather!</p>
+            <form>
+                <input placeholder="Location">
+                <button>Search</button>
+            </form>
+            <p id="message-1"></p>
+            <p id="message-2"></p>
+        </div>
+       
+        {{>footer}}
+        <script src="/js/app.js"></script>  <!--- moved to end so that this doesn't run until all our elements are available -->
+    </body>
+</html> 
