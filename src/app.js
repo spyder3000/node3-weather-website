@@ -10,6 +10,7 @@ const forecast = require('./utils/forecast');
 // console.log(__filename);  // path to current file
 
 const app = express();   // creates a new express application 
+const port = process.env.PORT || 3000;     // e.g. process environment var from heroku;  if running locally, will default to 3000
 
 // DEfine paths for Express config;  __dirname is path to current directory;  path.join to go up one level & into public dir;  
 const publicDirectoryPath = path.join(__dirname, '../public');  // this line will match to public files first (e.g. index.html) prior to app.get stmts below  
@@ -117,6 +118,6 @@ app.get('*', (req, res) => {
 })
 
 // To start the server up;  access this via localhost:3000 URL  
-app.listen(3000, () => {    // port 3000 is default development port;  live HTML port is typically 80
-    console.log('Server started on port 3000'); 
+app.listen(port, () => {    // port 3000 is default development port;  live HTML port is typically 80
+    console.log('Server started on port '+port); 
 });  
