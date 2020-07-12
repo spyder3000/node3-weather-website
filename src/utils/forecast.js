@@ -26,7 +26,7 @@ const forecast = (long, lat, callback) => {
         }
         else {
             callback(null, /*'Weather summary: '+*/ Math.round(body.main.temp)   // main data is in response.body
-                + ' degrees.  ' + body.weather[0].main + '.  Wind speed is ' + body.wind.speed 
+                + ' degrees.  ' + body.weather[0].main + '.  Wind speed is ' + body.wind.speed + ' mph'
                 /*+ '.  Temp high = ' +  Math.round(body.main.temp_max) + '. Temp low = ' +  Math.round(body.main.temp_min)*/);
 
              /*   date: response.body.list[0].dt_txt, 
